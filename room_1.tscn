@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://blh4tk4pvjq1l"]
+
+[ext_resource type="Texture2D" uid="uid://cobp2ewkik2uy" path="res://Assets/Scenery.jpg" id="1_0gevy"]
+[ext_resource type="PackedScene" uid="uid://ru61vr6k8d3x" path="res://Characters/main_character.tscn" id="2_m8co2"]
+
+[node name="Room1" type="Node2D" unique_id=199305763]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=906112554]
+offset_left = -553.0
+offset_top = -382.0
+offset_right = 2456.0
+offset_bottom = 1120.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2047999099]
+offset_right = 1793.0
+offset_bottom = 660.0
+texture = ExtResource("1_0gevy")
+
+[node name="Main_Character" parent="." unique_id=2010699689 instance=ExtResource("2_m8co2")]
+position = Vector2(396, 322)

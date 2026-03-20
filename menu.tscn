@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://rryxl3bkkycw"]
+
+[ext_resource type="Texture2D" uid="uid://bbyueviborjab" path="res://Assets/fontbolt.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://crerosx5tow84" path="res://Scripts/control.gd" id="1_cayip"]
+[ext_resource type="FontFile" uid="uid://dsj0kmc3cbg6n" path="res://Fonts/DeterminationMonoWebRegular-Z5oq.ttf" id="1_xhh6f"]
+
+[node name="Menu" type="Node2D" unique_id=780958110]
+
+[node name="Control" type="Control" parent="." unique_id=857423293]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = -6.0
+offset_right = 1157.0
+offset_bottom = 651.0
+script = ExtResource("1_cayip")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1797474809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=973330476]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 162.0
+offset_top = -242.0
+offset_right = -242.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Start" type="Button" parent="Control/VBoxContainer" unique_id=1027025284]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xhh6f")
+theme_override_font_sizes/font_size = 30
+text = "Comecar"
+
+[node name="Quit" type="Button" parent="Control/VBoxContainer" unique_id=1432546521]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xhh6f")
+theme_override_font_sizes/font_size = 30
+text = "Sair"
+
+[node name="Game Title" type="VBoxContainer" parent="Control" unique_id=763309140]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -539.0
+offset_top = 97.0
+offset_right = 652.1112
+offset_bottom = 201.0
+grow_horizontal = 2
+scale = Vector2(0.9, 0.9)
+
+[node name="TextureRect" type="TextureRect" parent="Control/Game Title" unique_id=317895209]
+layout_mode = 2
+texture = ExtResource("1_1rerr")
+
+[node name="TextEdit" type="TextEdit" parent="Control" unique_id=1824024581]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 193.0
+offset_right = 1114.0
+offset_bottom = 293.0
+theme_override_fonts/font = ExtResource("1_xhh6f")
+theme_override_font_sizes/font_size = 80
+text = "Alpha v0.1"
+
+[connection signal="pressed" from="Control/VBoxContainer/Start" to="Control" method="_on_start_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Quit" to="Control" method="_on_settings_pressed"]
